@@ -11,22 +11,18 @@ const signToken = (id) => {
 exports.signup = async (req, res, next) => {
 	const {
 		name,
-		sellerName,
-		mobile,
 		email,
 		password,
 		passwordConfirm,
-		rewardPercentage,
+	
 	} = req.body;
 
 	const newUser = await User.create({
 		name,
-		sellerName,
-		mobile,
 		email,
 		password,
 		passwordConfirm,
-		rewardPercentage,
+		
 	});
 
 	// JWT Token sign

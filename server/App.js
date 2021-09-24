@@ -1,7 +1,7 @@
 const express = require("express");
 const morgan = require("morgan");
 const compression = require("compression");
-
+const path = require('path')
 const app = express();
 
 let cors = require('cors');
