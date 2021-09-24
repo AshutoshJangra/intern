@@ -33,8 +33,7 @@ const useStorage =(file , btn)=> {
         const response = await axiosInstance.post('/api/v1/files/upload',data) ;
     
         await response.data;
-        
-        console.log("response: " , response.data);
+    
       }
 
     useEffect(()=>{

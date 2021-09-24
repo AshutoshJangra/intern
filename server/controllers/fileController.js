@@ -4,9 +4,9 @@ const { response } = require('express');
 const fs = require("fs");
 let path = require('path');
 
-exports.deleteFile = (req, res)=>{
+exports.deleteFile =async (req, res)=>{
    
-    const file =  File.deleteOne({_id: req.params.id} , err=>{
+    const file =  await File.deleteOne({_id: req.params.id} , err=>{
         if(err) console.log(err);
         return res.status(200).send({
             status: "success",
@@ -16,9 +16,9 @@ exports.deleteFile = (req, res)=>{
     
     
 }
-exports.updateFile = (req, res)=>{
+exports.updateFile = async (req, res)=>{
    console.log("req body: ",req.body);
-    const file =  File.updateOne({name: req.body.name} ,{link:req.body.link}, err=>{
+    const file =  await File.updateOne({name: req.body.name} ,{link:req.body.link}, err=>{
         if(err) console.log(err);
 
         console.log("heyy");
@@ -30,25 +30,16 @@ exports.updateFile = (req, res)=>{
     
     
 }
-exports.uploadFile = (req, res)=>{
+exports.uploadFile = async(req, res)=>{
     const data = {
         ...req.body,
         owner:req.user._id
     }
-    const file =  File.create(data);
-    
+    const file = await File.create(data);
+    console.log(data);
     return res.status(200).send({
-            status: "success"
+            status: "success",
+            msg:"Successfully Updated"
      });
 }
 
-exports.getKeys = (req, res)=>{
-    const data = {
-        key:1111
-    }
-    
-    return res.status(200).send({
-            status: "success",
-            data
-     });
-}

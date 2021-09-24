@@ -13,15 +13,17 @@ exports.signup = async (req, res, next) => {
 		name,
 		email,
 		password,
-		passwordConfirm,
+		passwordConfirm
 	
 	} = req.body;
+
+	console.log(process.env);
 
 	const newUser = await User.create({
 		name,
 		email,
 		password,
-		passwordConfirm,
+		passwordConfirm
 		
 	});
 

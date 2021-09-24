@@ -7,7 +7,7 @@ const authController = require("../controllers/authController");
 Router.route("/upload").post( authController.protect, fileController.uploadFile);
 Router.route("/:id").delete( authController.protect, fileController.deleteFile);
 Router.route("/update").put( authController.protect, fileController.updateFile);
-Router.route("/keys").get( authController.protect, fileController.getKeys);
+
 
 
 module.exports = Router;
