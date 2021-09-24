@@ -61,7 +61,7 @@ const Dashboard = () => {
 							<button className="delete" name={file._id} onClick={e => deleteFile(e)}> Delete </button>
 						</div>	
 					</div>
-				}) : <h3 > You have no files. Click to Add File Button</h3> : <h2/>}
+				}) : <h3 > You have no files. Click to Add File Button</h3> : <h3 > You have no files. Click to Add File Button</h3>}
 			</section>
 		</div>
 	);
