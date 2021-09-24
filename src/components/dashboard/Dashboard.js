@@ -18,7 +18,7 @@ const Dashboard = () => {
 
 	const deleteFile = (e) => {
 		const id = e.target.name;
-		axiosInstance.delete(`/files/${id}`).then(res => setMsg(res.data.msg));
+		axiosInstance.delete(`/api/v1/files/${id}`).then(res => setMsg(res.data.msg));
 	};
 
 	const copyClipboard = (e) => {
