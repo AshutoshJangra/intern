@@ -48,7 +48,7 @@ const Dashboard = () => {
 			{msg && <h3 className="msg">{msg}</h3>}
 
 			<section className="dashboard_files_section">
-				{user.files && user.files.map((file  , key)=> {
+				{user && user.files.map((file  , key)=> {
 					return <div key={file.name} className="file"> 
 						<img src={file.link}/>
 						<h5 className="title"> {file.name}</h5>
