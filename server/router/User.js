@@ -8,6 +8,7 @@ Router.post("/login", authController.login);
 
 Router.route("/").get(authController.protect, userController.getUserInfo);
 
+// Router.route("/all").get(authController.protect, shopController.getAllShops);
 
 module.exports = Router;
 authController.protect, userController.getShopInfo;

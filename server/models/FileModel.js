@@ -21,7 +21,16 @@ const fileSchema = new Schema({
 	toObject: {virtual:true}
 });
 
+// userSchema.pre("save", function(next) {
+// 	const code = Math.random()
+// 		.toString()
+// 		.substr(2, 4);
 
+// 	if (!this.passcode) {
+// 		this.passcode = parseInt(code);
+// 	}
+// 	next();
+// });
 
 const File = mongoose.model("File", fileSchema);
 

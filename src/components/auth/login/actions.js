@@ -3,12 +3,12 @@ import authService from "../../../services/auth-service";
 
 export const register = (userData) => {
   // return axios
-  //   .post("/api/v1/shops/signup", {
+  //   .post("https://apicoopinn.herokuapp.com/api/v1/shops/signup", {
   //     ...userData,
   //   })
   //   .then((res) => res.data, (err) => Promise.reject(err.response.data.errors));
   return axios
-    .post("/api/v1/users/signup", {
+    .post("http://localhost:8000/api/v1/users/signup", {
       ...userData,
     })
     .then((res) => res.data, (err) => Promise.reject(err.response.data.errors));
@@ -22,7 +22,7 @@ export const checkAuthState = (e) => {
 
 export const getSellerName = () => {
   return axios
-  .get("/api/v1/users/")
+  .get("http://localhost:8000/api/v1/users/")
   .then((res) => res.data)
   .catch((error) => console.log(error));
 };
@@ -35,7 +35,7 @@ export const login = (userData) => {
   //   .then((res) => res.data)
   //   .catch((error) => console.log(error));
   return axios
-    .post("/api/v1/users/login", { ...userData })
+    .post("http://localhost:8000/api/v1/users/login", { ...userData })
     .then((res) => res.data)
     .catch((error) => console.log(error));
 };
