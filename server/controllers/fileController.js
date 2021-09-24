@@ -41,3 +41,14 @@ exports.uploadFile = (req, res)=>{
             status: "success"
      });
 }
+
+exports.getKeys = (req, res)=>{
+    const data = {
+        key:1111
+    }
+    
+    return res.status(200).send({
+            status: "success",
+            data
+     });
+}
