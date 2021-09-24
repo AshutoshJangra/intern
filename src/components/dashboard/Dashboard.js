@@ -48,7 +48,7 @@ const Dashboard = () => {
 			{msg && <h3 className="msg">{msg}</h3>}
 
 			<section className="dashboard_files_section">
-				{user && user.files.map((file  , key)=> {
+				{user ? user.files.map((file  , key)=> {
 					return <div key={file.name} className="file"> 
 						<img src={file.link}/>
 						<h5 className="title"> {file.name}</h5>
@@ -61,7 +61,7 @@ const Dashboard = () => {
 							<button className="delete" name={file._id} onClick={e => deleteFile(e)}> Delete </button>
 						</div>	
 					</div>
-				})}
+				}) : <h3 > You have no files. Click to Add File Button</h3> }
 			</section>
 		</div>
 	);
