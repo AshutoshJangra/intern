@@ -10,8 +10,8 @@ class AxiosService {
 
   initInstance() {
     this.axiosInstance = axios.create({
-      baseURL: "",
-      timeout: 2000,
+      baseURL: "/",
+      timeout: 4000,
     });
 
     this.axiosInstance.interceptors.request.use((config) => {
