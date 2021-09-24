@@ -22,7 +22,6 @@ app.use(express.json());
 
 app.use(express.static('build'));
 
-// app.use('/u' , express.static(path.join(__dirname , `../public`)))
 
 //router
 app.use("/api/v1/files", fileRouter);
