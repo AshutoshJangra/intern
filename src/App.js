@@ -1,22 +1,17 @@
-import './App.css';
-import React, { useState } from 'react'
+import React from "react";
+import "./App.css";
 
-import Progress from './components/Progress';
-
+import AuthContextProvider from "./contexts/AuthContext";
+import Root from "./components/root";
 function App() {
-  
-
-  
-
-  return (
-    <div className="App">
-      <form > 
-      <header className="App-header">
-      
-      </header>
-      </form>
-    </div>
-  );
+	return (
+		<div className="App">
+			<AuthContextProvider>
+				<Root />
+			</AuthContextProvider>
+		</div>
+	);
 }
 
 export default App;
+
