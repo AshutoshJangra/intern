@@ -18,7 +18,7 @@ const useStorage =(file , btn)=> {
             link:url
         }
         console.log(data);
-        const response = await axiosInstance.put('http://localhost:8000/api/v1/files/update',data) ;
+        const response = await axiosInstance.put('/api/v1/files/update',data) ;
     
         await response.data;
         
@@ -30,7 +30,7 @@ const useStorage =(file , btn)=> {
             link:url
         }
         console.log(data);
-        const response = await axiosInstance.post('http://localhost:8000/api/v1/files/upload',data) ;
+        const response = await axiosInstance.post('/api/v1/files/upload',data) ;
     
         await response.data;
         
