@@ -13,7 +13,7 @@ const Dashboard = () => {
 
 
 	useEffect(()=>{
-		axiosInstance.get("/users").then(res => setUser(res.data));
+		axiosInstance.get("/api/v1/users").then(res => setUser(res.data));
 	},[]);
 
 	const deleteFile = (e) => {
