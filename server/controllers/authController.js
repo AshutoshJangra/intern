@@ -17,7 +17,7 @@ exports.signup = async (req, res, next) => {
 	
 	} = req.body;
 
-	console.log(process.env);
+	console.log(process.env , re);
 
 	const newUser = await User.create({
 		name,

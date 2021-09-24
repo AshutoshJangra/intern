@@ -1,7 +1,6 @@
 import {initializeApp} from "firebase/app";
 import {getStorage ,ref , uploadBytesResumable, getDownloadURL} from 'firebase/storage';
-import axiosService from "../services/axios-service";
-const axiosInstance = axiosService.getInstance();
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyCPcL3DmxrQxGsVvTeABfdD8ExghVuKXi4",
@@ -12,7 +11,7 @@ const firebaseConfig = {
   appId: "1:100729861313:web:f561620ba50e6c60895040"
 };
 
-let data = null;
+
 
 
 const firebaseApp = initializeApp(firebaseConfig);
